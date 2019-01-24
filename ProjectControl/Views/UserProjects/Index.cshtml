@@ -1,0 +1,18 @@
+﻿@model ProjectControl.ModelsViews.ModelView
+
+@{
+    ViewBag.Title = "Code Challenge";
+}
+
+<head>
+    <script src="~/ScriptsViews/ProjectUsersFunctions.js"></script>
+</head>
+
+<p></p>
+<div class=" text-center">@Html.DropDownList("UserId", Model.ListUsers, "--", new { @onchange = "userChange()" })</div>
+
+<p></p>
+
+<div id="divPartialView">
+    @Html.Partial("PartialTable")
+</div>

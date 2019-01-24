@@ -1,0 +1,38 @@
+﻿@model ProjectControl.ModelsViews.ModelView
+
+<table class="table">
+    <tr>
+        <th>
+            Project Id
+        </th>
+        <th>
+            Start Date
+        </th>
+        <th>
+            Time Start            
+        </th>
+        <th>
+            End Date
+        </th>
+        <th>
+           Credits
+        </th>
+        <th>
+            Is active
+        </th>
+        <th></th>
+    </tr>
+    <tr>        
+        @foreach (var item in Model.UserProjectResult)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.StartDate</td>
+                <td>@item.TimeStart</td>
+                <td>@item.EndDate</td>
+                <td>@item.Credits</td>
+                <td>@item.IsActiveLabel</td>
+            </tr>
+         }
+    </tr>
+</table>
